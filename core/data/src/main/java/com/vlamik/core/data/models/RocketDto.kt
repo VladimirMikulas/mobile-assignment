@@ -11,10 +11,10 @@ data class RocketDto(
     val mass: Mass? = null,
 
     @SerialName("first_stage")
-    val firstStage: FirstStage? = null,
+    val firstStage: FirstStage,
 
     @SerialName("second_stage")
-    val secondStage: SecondStage? = null,
+    val secondStage: SecondStage,
 
     val engines: Engines? = null,
 
