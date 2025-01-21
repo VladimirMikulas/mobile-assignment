@@ -5,7 +5,7 @@ import com.vlamik.core.domain.models.RocketListItemModel
 import com.vlamik.core.domain.models.toRocketListItemModel
 import javax.inject.Inject
 
-class GetRocketsListItem @Inject constructor(
+class GetRocketsList @Inject constructor(
     private val rocketsRepository: RocketsRepository
 ) {
     suspend operator fun invoke(): Result<List<RocketListItemModel>> {

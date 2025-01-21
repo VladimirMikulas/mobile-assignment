@@ -4,9 +4,9 @@ import com.vlamik.core.data.models.RocketDto
 
 data class RocketDetailModel(
     val description: String,
-    val height: Int,
-    val diameter: Int,
-    val mass: Int,
+    val height: Double,
+    val diameter: Double,
+    val mass: Double,
     val firstStage: FirstStageDetailModel,
     val secondStage: SecondStageDetailModel,
     val images: List<String>
@@ -15,9 +15,9 @@ data class RocketDetailModel(
 
 fun RocketDto.toRocketDetailModel(): RocketDetailModel = RocketDetailModel(
     description = description.orEmpty(),
-    height = height?.meters?.toInt() ?: -1,
-    diameter = diameter?.meters?.toInt() ?: -1,
-    mass = mass?.kg?.toInt() ?: -1,
+    height = height?.meters ?: -1.0,
+    diameter = diameter?.meters ?: -1.0,
+    mass = mass?.kg ?: -1.0,
     firstStage = firstStage.toFirstStageDetailModel(),
     secondStage = secondStage.toSecondStageDetailModel(),
     images = flickrImages.orEmpty()

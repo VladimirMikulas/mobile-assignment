@@ -6,8 +6,8 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class RocketDto(
-    val height: Diameter? = null,
-    val diameter: Diameter? = null,
+    val height: Dimensions? = null,
+    val diameter: Dimensions? = null,
     val mass: Mass? = null,
 
     @SerialName("first_stage")
@@ -50,9 +50,9 @@ data class RocketDto(
 )
 
 @Serializable
-data class Diameter(
-    val meters: Long? = null,
-    val feet: Long? = null
+data class Dimensions(
+    val meters: Double? = null,
+    val feet: Double? = null
 )
 
 @Serializable
@@ -80,7 +80,7 @@ data class Engines(
     val propellant2: String? = null,
 
     @SerialName("thrust_to_weight")
-    val thrustToWeight: Long? = null
+    val thrustToWeight: Double? = null
 )
 
 @Serializable
@@ -109,7 +109,7 @@ data class FirstStage(
     val engines: Long? = null,
 
     @SerialName("fuel_amount_tons")
-    val fuelAmountTons: Long? = null,
+    val fuelAmountTons: Double? = null,
 
     @SerialName("burn_time_sec")
     val burnTimeSEC: Long? = null
@@ -123,8 +123,8 @@ data class LandingLegs(
 
 @Serializable
 data class Mass(
-    val kg: Long? = null,
-    val lb: Long? = null
+    val kg: Double? = null,
+    val lb: Double? = null
 )
 
 @Serializable
@@ -143,7 +143,7 @@ data class SecondStage(
     val engines: Long? = null,
 
     @SerialName("fuel_amount_tons")
-    val fuelAmountTons: Long? = null,
+    val fuelAmountTons: Double? = null,
 
     @SerialName("burn_time_sec")
     val burnTimeSEC: Long? = null
@@ -160,6 +160,6 @@ data class Payloads(
 
 @Serializable
 data class CompositeFairing(
-    val height: Diameter? = null,
-    val diameter: Diameter? = null
+    val height: Dimensions? = null,
+    val diameter: Dimensions? = null
 )

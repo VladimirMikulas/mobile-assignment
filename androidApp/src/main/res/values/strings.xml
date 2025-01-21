@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SpaceXApp</string>
+
+    <!-- Generic -->
+    <string name="api_error">Error from API.</string>
+
+    <!-- List Screen -->
+    <string name="rockets">Rockets</string>
+    <string name="label_first_flight">First flight: </string>
+    <string name="article_source_image">Article source image</string>
+    <string name="Logout">Logout</string>
+    <string name="no_news_available">No latest news are available</string>
+
+    <!-- Rocket details Screen -->
+    <string name="article_detail">Rocket Detail</string>
+    <string name="creators">Creators:</string>
+    <string name="publication_date">Publication date:</string>
+    <string name="article_image">Article image</string>
+    <string name="share">Share</string>
+    <string name="share_via">Share via</string>
+</resources>
