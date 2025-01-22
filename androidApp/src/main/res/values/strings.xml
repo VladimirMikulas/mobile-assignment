@@ -7,15 +7,23 @@
     <!-- List Screen -->
     <string name="rockets">Rockets</string>
     <string name="label_first_flight">First flight: </string>
-    <string name="article_source_image">Article source image</string>
-    <string name="Logout">Logout</string>
-    <string name="no_news_available">No latest news are available</string>
 
     <!-- Rocket details Screen -->
-    <string name="article_detail">Rocket Detail</string>
-    <string name="creators">Creators:</string>
-    <string name="publication_date">Publication date:</string>
-    <string name="article_image">Article image</string>
-    <string name="share">Share</string>
-    <string name="share_via">Share via</string>
+    <string name="back">Back</string>
+    <string name="launch">Launch</string>
+    <string name="overview">Overview</string>
+    <string name="parameters">Parameters</string>
+    <string name="first_stage">First Stage</string>
+    <string name="second_stage">Second Stage</string>
+    <string name="height">height</string>
+    <string name="meters">m</string>
+    <string name="diameter">diameter</string>
+    <string name="mass">mass</string>
+    <string name="tons">t</string>
+    <string name="reusable">reusable</string>
+    <string name="not_reusable">not reusable</string>
+    <string name="engines">engines</string>
+    <string name="tons_of_fuel">tons of fuel</string>
+    <string name="seconds_burn_time">seconds burn time</string>
+    <string name="rocket_image">Rocket image</string>
 </resources>

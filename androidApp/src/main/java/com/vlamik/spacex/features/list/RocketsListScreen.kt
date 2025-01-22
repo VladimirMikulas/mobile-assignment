@@ -2,7 +2,6 @@ package com.vlamik.spacex.features.list
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -40,10 +38,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.vlamik.core.domain.models.RocketListItemModel
 import com.vlamik.spacex.R
+import com.vlamik.spacex.component.ErrorMessage
 import com.vlamik.spacex.features.list.RocketsListViewModel.ListScreenUiState
 import com.vlamik.spacex.features.list.RocketsListViewModel.ListScreenUiState.ErrorFromAPI
 import com.vlamik.spacex.features.list.RocketsListViewModel.ListScreenUiState.LoadingFromAPI
 import com.vlamik.spacex.features.list.RocketsListViewModel.ListScreenUiState.UpdateSuccess
+import com.vlamik.spacex.theme.SoftGray
 import com.vlamik.spacex.theme.TemplateTheme
 import com.vlamik.spacex.utils.preview.DeviceFormatPreview
 import com.vlamik.spacex.utils.preview.FontScalePreview
@@ -92,7 +92,7 @@ private fun RocketsListComposable(
                                 .padding(horizontal = 16.dp, vertical = 8.dp)
                                 .fillMaxWidth()
                                 .clip(RoundedCornerShape(16.dp)),
-                            tonalElevation = 4.dp
+                            color = SoftGray
                         ) {
                             LazyColumn(
                                 verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -116,17 +116,7 @@ private fun RocketsListComposable(
                     }
 
                     is ErrorFromAPI -> {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .wrapContentSize(Alignment.Center)
-                        ) {
-                            Text(
-                                text = stringResource(id = R.string.api_error),
-                                color = MaterialTheme.colorScheme.error,
-                                style = MaterialTheme.typography.bodyLarge
-                            )
-                        }
+                        ErrorMessage(errorMessage = stringResource(id = R.string.api_error))
                     }
                 }
             }
@@ -177,7 +167,7 @@ private fun RocketInfo(rocket: RocketListItemModel, modifier: Modifier) {
             overflow = TextOverflow.Ellipsis
         )
         Text(
-            text = stringResource(id = R.string.label_first_flight).plus(rocket.firstFlight),
+            text = "${stringResource(id = R.string.label_first_flight)} ${rocket.firstFlight}",
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -210,7 +200,7 @@ private fun RocketsListScreenPreview() {
                     RocketListItemModel(
                         "5e9d0d95eda69974db09d1ed",
                         "Falcon Heavy",
-                        "2018-02-06",
+                        "6.2.2018",
                     )
                 },
 
