@@ -26,4 +26,8 @@
     <string name="tons_of_fuel">tons of fuel</string>
     <string name="seconds_burn_time">seconds burn time</string>
     <string name="rocket_image">Rocket image</string>
+
+    <!-- Rocket launch Screen -->
+    <string name="rocket_idle_message">Move your phone up to launch the rocket</string>
+    <string name="rocket_launch_message">Launch successful!</string>
 </resources>

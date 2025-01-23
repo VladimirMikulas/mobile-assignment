@@ -37,7 +37,7 @@ class RocketDetailViewModel @AssistedInject constructor(
 
     @AssistedFactory
     interface Factory {
-        fun create(articleId: String): RocketDetailViewModel
+        fun create(rocketId: String): RocketDetailViewModel
     }
 
     companion object {

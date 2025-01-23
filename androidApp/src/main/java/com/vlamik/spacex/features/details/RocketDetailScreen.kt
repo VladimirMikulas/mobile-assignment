@@ -46,8 +46,8 @@ import com.vlamik.spacex.utils.preview.ThemeModePreview
 @Composable
 fun RocketDetailScreen(
     detailsViewModel: RocketDetailViewModel,
-    onBackClicked: () -> Unit,
-    onLaunchClicked: () -> Unit
+    onLaunchClicked: (String) -> Unit,
+    onBackClicked: () -> Unit
 ) {
     val rocketDetailState by detailsViewModel.updateState.collectAsState()
 
@@ -68,7 +68,7 @@ fun RocketDetailScreen(
 private fun RocketDetailComposable(
     state: RocketDetailViewModel.UiState,
     onBackClicked: () -> Unit,
-    onLaunchClicked: () -> Unit
+    onLaunchClicked: (String) -> Unit
 
 ) {
     val rocketDetail: RocketDetailModel

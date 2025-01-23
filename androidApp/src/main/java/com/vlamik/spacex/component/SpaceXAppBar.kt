@@ -34,7 +34,7 @@ fun SpaceXAppBar(
     backButtonClickAction: () -> Unit = {},
     backButtonText: String = stringResource(id = R.string.back),
     addLaunchButton: Boolean = false,
-    launchButtonClickAction: () -> Unit = {},
+    launchButtonClickAction: (String) -> Unit = {},
 ) {
     Surface(
         shadowElevation = 4.dp,
@@ -77,7 +77,7 @@ fun SpaceXAppBar(
             },
             actions = {
                 if (addLaunchButton) {
-                    TextButton(onClick = { launchButtonClickAction() }) {
+                    TextButton(onClick = { launchButtonClickAction(title) }) {
                         Text(
                             text = stringResource(id = R.string.launch),
                             style = MaterialTheme.typography.titleMedium.copy(
