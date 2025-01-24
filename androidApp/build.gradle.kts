@@ -19,7 +19,6 @@ fun getLocalProperty(key: String): String? {
 
 android {
     compileSdk = libs.versions.sdk.compile.get().toInt()
-
     defaultConfig {
         applicationId = "com.vlamik.spacex"
 
@@ -68,8 +67,7 @@ android {
         jvmToolchain(17)
     }
 
-
-    packagingOptions {
+    packaging {
         resources {
             excludes.add("/META-INF/{AL2.0,LGPL2.1}")
             excludes.add("/META-INF/LICENSE*")
